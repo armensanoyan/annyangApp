@@ -46,10 +46,9 @@ export const Dictaphone = () => {
 
     const commands = [
         {
-            command: ['*create node *', ' *create nodes *', '*create note *', 'create node *', 'crate node', 'crate note'],
+            command: ['create node *'],
             callback: (speech) => {
-                setMessages('COMMAND!!! '+speech)
-                console.log('got an command')
+                setMessages('do you want to create node ? '+speech)
             },
             matchInterim: true,
             isFuzzyMatch: true,
@@ -58,9 +57,8 @@ export const Dictaphone = () => {
         },
         {
             command: ['give name *'],
-            callback: (speech) => {
-                setMessages('COMMAND!!! '+speech)
-                console.log('got an command')
+            callback: (name) => {
+                setMessages('do you want to give your node name '+name)
             },
             matchInterim: true,
             isFuzzyMatch: true,
@@ -70,8 +68,7 @@ export const Dictaphone = () => {
         {
             command: ['give type *'],
             callback: (speech) => {
-                setMessages('COMMAND!!! '+speech)
-                console.log('got an command')
+                setMessages('do you want to give your node type '+speech)
             },
             matchInterim: true,
             isFuzzyMatch: true,
