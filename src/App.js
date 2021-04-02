@@ -13,11 +13,12 @@ function App() {
   navigator.mediaDevices.enumerateDevices()
     .then(res =>{
       res.find(e => {
-        if (e.kind == 'audioinput') setHaveMicrophone(true)
+        if (e.kind === 'audioinput') setHaveMicrophone(true)
+        return null
       })
     })
 
-    const display = haveMicrophone == true ? <Dictaphone /> : <h1>Please connect microphone</h1>
+    const display = haveMicrophone === true ? <Dictaphone /> : <h1>Please connect microphone</h1>
 
   return (
     <div className="App">
