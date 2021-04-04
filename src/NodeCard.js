@@ -88,40 +88,6 @@ function NodeCard(props) {
             {NodeCreateDiv}
         </div>
     )
-
-
-    // if (props.state.name === null && props.state.command === true) {
-    //     return (<h2>Please give your node a name</h2>)
-    // } else if (props.state.name !== null && props.state.type === null) {
-    //     return (
-    //         <StyleDiv >
-    //             <StyledP >
-    //                 The name of node is
-    //                 <StyleInput onChange={ChangeName} defaultValue={props.state.name} />
-    //             </StyledP> 
-    //         </StyleDiv>
-    //     )
-    // } else if (props.state.name !== null && props.state.type !== null) {
-    //     return (
-    //         <>
-    //             <StyleDiv>
-    //                 <StyledP>
-    //                     The name of node is 
-    //                     <StyleInput  onChange={ChangeName} defaultValue={props.state.name} />
-    //                 </StyledP>
-    //             </StyleDiv>
-
-    //             <StyleDiv>
-    //                 <StyledP>
-    //                     The type of node is 
-    //                     <StyleInput onChange={ChangeType} defaultValue={props.state.type} />
-    //                 </StyledP>
-    //             </StyleDiv>
-    //         </>
-    //     )
-    // } else {
-    //      return <h1>Hi</h1>
-    // }
 }
 
 
