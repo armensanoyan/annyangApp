@@ -1,15 +1,11 @@
 import React, {useState} from 'react'
 import './App.css'
-import {Dictaphone} from './SpeechRecognition.js'
+import CreateNode from './CreateNode'
 
-var constraints = window.constraints = {
-  audio: true,
-  video: false
-};
 
 function App() {
   const [haveMicrophone, setHaveMicrophone] = useState(false)
- 
+
   navigator.mediaDevices.enumerateDevices()
     .then(res =>{
       res.find(e => {
@@ -18,7 +14,7 @@ function App() {
       })
     })
 
-    const display = haveMicrophone === true ? <Dictaphone /> : <h1>Please connect microphone</h1>
+  const display = haveMicrophone === true ? <CreateNode /> : <h1>Please connect microphone</h1>
 
   return (
     <div className="App">
